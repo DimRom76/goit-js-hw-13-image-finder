@@ -25,7 +25,7 @@ var unsplashID =
 
 const key = '19471965-37c13a0c7cc27691c95ac1581';
 const strQuery = 'beach';
-const url = `https://pixabay.com/api/?key=${key}&q=${strQuery}&image_type=photo`;
+const url = `https://cors-anywhere.herokuapp.com/https://pixabay.com/api/?key=${key}&q=${strQuery}&image_type=photo`;
 // const NumberOfPhotos = 12;
 // const orientation = 'all';
 // const url = `https://pixabay.com/api?key=${key}&q=${strQuery}&image_type=photo&per_page=${NumberOfPhotos}&orientation=${orientation}`;
