@@ -6,40 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Starter Kit</title>
 
-    <!-- Don't forget to delete this style tag. -->
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .intro {
-        text-align: center;
-      }
-
-      .intro h1 {
-        margin-top: 0;
-        font-weight: 500;
-        font-size: 40px;
-      }
-
-      .intro img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <article class="intro">
-      <h1>Webpack starter kit</h1>
+    <h1>Infinite Scroll - Loading JSON + Masonry</h1>
 
-      <!-- HTML image reference example. -->
-      <img src="./images/intro.png" alt="" width="640" />
-    </article>
+    <p>
+      Loading photos from the
+      <a
+        href="https://unsplash.com/developers?utm_source=infinite-scroll-demos&utm_medium=referral&utm_campaign=api-credit"
+        >Unsplash API</a
+      >
+    </p>
+
+    <div class="grid">
+      <div class="grid__col-sizer"></div>
+      <div class="grid__gutter-sizer"></div>
+    </div>
+
+    <div class="page-load-status">
+      <div class="loader-ellips infinite-scroll-request">
+        <span class="loader-ellips__dot"></span>
+        <span class="loader-ellips__dot"></span>
+        <span class="loader-ellips__dot"></span>
+        <span class="loader-ellips__dot"></span>
+      </div>
+      <p class="infinite-scroll-last">End of content</p>
+      <p class="infinite-scroll-error">No more pages to load</p>
+    </div>
+
+    <!-- .photo-item template HTML -->
+    <script type="text/html" id="photo-item-template">
+      <div class="photo-item">
+        <img
+          class="photo-item__image"
+          src="{{urls.regular}}"
+          alt="Photo by {{user.name}}"
+        />
+        <p class="photo-item__caption">
+          <a
+            href="{{user.links.html}}?utm_source=infinite-scroll-demos&utm_medium=referral&utm_campaign=api-credit"
+            >{{user.name}}</a
+          >
+        </p>
+      </div>
+    </script>
   </body>
 </html>

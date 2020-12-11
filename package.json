@@ -49,7 +49,14 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "axios": "^0.21.0",
+    "basiclightbox": "^5.0.3",
     "core-js": "^3.6.5",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "imagesloaded": "^4.1.4",
+    "infinite-scroll": "^3.0.6",
+    "jquery": "^3.5.1",
+    "lightgallery.js": "^1.4.0",
+    "masonry-layout": "^4.2.2"
   }
 }
