@@ -13,17 +13,39 @@
   </head>
 
   <body>
-    <h1>Infinite Scroll - Loading JSON + Masonry</h1>
+    <div class="header">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <div class="radioGrupp">
+          <input type="radio" id="choice1" name="orientation" value="all" />
+          <label for="choice1">All</label>
 
-    <p>
-      Loading photos from the
-      <a
-        href="https://unsplash.com/developers?utm_source=infinite-scroll-demos&utm_medium=referral&utm_campaign=api-credit"
-        >Unsplash API</a
-      >
-    </p>
+          <input
+            type="radio"
+            id="choice2"
+            name="orientation"
+            value="horizontal"
+          />
+          <label for="choice2">Horizontal</label>
 
-    <div class="grid">
+          <input
+            type="radio"
+            id="choice3"
+            name="orientation"
+            value="vertical"
+          />
+          <label for="choice3">Vertical</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="grid gallery">
       <div class="grid__col-sizer"></div>
       <div class="grid__gutter-sizer"></div>
     </div>
@@ -38,22 +60,5 @@
       <p class="infinite-scroll-last">End of content</p>
       <p class="infinite-scroll-error">No more pages to load</p>
     </div>
-
-    <!-- .photo-item template HTML -->
-    <script type="text/html" id="photo-item-template">
-      <div class="photo-item">
-        <img
-          class="photo-item__image"
-          src="{{urls.regular}}"
-          alt="Photo by {{user.name}}"
-        />
-        <p class="photo-item__caption">
-          <a
-            href="{{user.links.html}}?utm_source=infinite-scroll-demos&utm_medium=referral&utm_campaign=api-credit"
-            >{{user.name}}</a
-          >
-        </p>
-      </div>
-    </script>
   </body>
 </html>

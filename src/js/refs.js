@@ -4,6 +4,8 @@ const refs = {
   header: document.querySelector('.header'),
   boby: document.querySelector('body'),
   rButton: document.getElementsByName('orientation'),
+  pageLoadStatus: document.querySelector('.page-load-status'),
+  infiniteScrollLast: document.querySelector('.infinite-scroll-last'),
 };
 
 export default refs;
