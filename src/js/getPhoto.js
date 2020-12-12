@@ -18,8 +18,8 @@ const optionsMasonry = {
   hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
 };
 
-let msnry;
-let infScroll;
+let msnry = null;
+let infScroll = null;
 
 function clear() {
   msnry.destroy();
@@ -33,7 +33,7 @@ function clear() {
 }
 
 function getPhoto(strQuery, orientation, update = false) {
-  if (update) {
+  if (update & msnry & infScroll) {
     clear();
   }
 

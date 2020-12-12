@@ -31,13 +31,13 @@ function onSubmitForm(event) {
     return;
   }
 
+  getPhoto(queryString, orientation, true);
+
   const orientation = getStatusRadioButton();
   localStorage.setItem(
     'lastQuery',
     JSON.stringify({ queryString, orientation }),
   );
-
-  getPhoto(queryString, orientation, true);
 }
 
 const lastQuery = localStorage.getItem('lastQuery');
