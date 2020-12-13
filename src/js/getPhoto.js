@@ -33,7 +33,7 @@ function clear() {
 }
 
 function getPhoto(strQuery, orientation, update = false) {
-  if (update & msnry & infScroll) {
+  if (update & !(msnry === null) & !(infScroll === null)) {
     clear();
   }
 

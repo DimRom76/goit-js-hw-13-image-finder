@@ -31,9 +31,9 @@ function onSubmitForm(event) {
     return;
   }
 
+  const orientation = getStatusRadioButton();
   getPhoto(queryString, orientation, true);
 
-  const orientation = getStatusRadioButton();
   localStorage.setItem(
     'lastQuery',
     JSON.stringify({ queryString, orientation }),
