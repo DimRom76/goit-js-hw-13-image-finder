@@ -26,7 +26,7 @@ function getStatusRadioButton() {
 
 function onSubmitForm(event) {
   event.preventDefault();
-  const queryString = event.target.elements[0].value;
+  const queryString = event.target.elements.query.value;
   if (queryString === '') {
     return;
   }
@@ -44,7 +44,6 @@ const lastQuery = localStorage.getItem('lastQuery');
 if (lastQuery) {
   const { queryString, orientation } = JSON.parse(lastQuery);
   setStatusRadioButton(orientation);
-  refs.searchForm.elements[0].value = queryString;
-  console.log(queryString);
+  refs.searchForm.elements.query.value = queryString;
   getPhoto(queryString, orientation);
 }
